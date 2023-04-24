@@ -1,6 +1,6 @@
 <?php
 $host = "mariadb";
-$dbname = "receptenboek";
+$dbname = "webshop";
 $dbuser = "user";
 $dbpass = "password";
 //werkt hoor
