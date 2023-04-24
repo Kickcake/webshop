@@ -1,0 +1,256 @@
+bodyd {
+    background-image: linear-gradient(rgba(4, 9, 30, 0.137), rgba(4, 9, 30, 0.7)), url('recipe-by-dall-e.png');
+    background-position: center;
+    background-size: cover;
+    position: relative
+}
+
+html {
+    max-height: fit-content;
+    background-color: rgba(143, 210, 28, 0.231);
+}
+
+body {
+    max-height: fit-content;
+    margin: 0;
+}
+
+header {
+    position: relative;
+    background-image: linear-gradient(rgba(11, 203, 8, 0.683), rgba(11, 203, 8, 0.505)), url('de-marokkaanse-keuken-2-1440x600.jpg');
+
+    height: 50pt;
+    padding-bottom: 60px;
+    padding-top: 10px;
+
+}
+
+header h1 {
+    color: white;
+    text-align: center;
+    font-size: 50pt;
+    margin: 0px;
+}
+
+.count {
+    text-align: center;
+    font-size: 15pt;
+    border-radius: 5px;
+    background-color: yellowgreen;
+    position: relative;
+    top: 50px;
+    height: 5em;
+    width: 108px;
+}
+
+.count p {
+    position: relative;
+    top: 10px;
+}
+
+.buttond {
+    position: relative;
+    top: -7.52em;
+}
+
+nav {
+    height: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(126, 192, 27);
+}
+
+nav a {
+    position: relative;
+    left: 108px;
+    padding-right: 0em;
+}
+
+
+footer {
+    position: relative;
+    top: 40px;
+    height: 80px;
+    background-color: rgb(99, 99, 99);
+}
+
+footer p {
+    position: relative;
+    top: 20px;
+    margin: 0%;
+    text-align: center;
+    font-size: 20pt;
+    color: white;
+}
+
+button {
+    background-color: rgb(201, 236, 42);
+    position: relative;
+    top: 3px;
+    width: 100px;
+    height: 44px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: rgb(215, 109, 23);
+}
+
+button:active {
+    background: rgb(255, 238, 0);
+}
+
+.ja {
+    text-align: center;
+}
+
+table,
+td,
+th {
+    border: 1px solid black;
+}
+
+.recepten {
+    max-width: 97em;
+    padding-top: 20px;
+    position: relative;
+    left: 110px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.recepten a {
+    background-color: gainsboro;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border-left: 5px solid black;
+    border-bottom: 5px solid black;
+    border-top: 3px solid rgb(92, 92, 92);
+    border-right: 3px solid rgb(92, 92, 92);
+    border-radius: 5px;
+    width: 371px;
+    height: 270px;
+    display: flex;
+    flex-direction: row;
+}
+
+.rlevel {
+    max-height: 10px;
+    position: relative;
+    top: 25px;
+    right: 33em;
+    min-width: 110%;
+    align-content: center;
+}
+
+.rgang {
+    min-width: 135px;
+    max-height: 10px;
+    position: relative;
+    top: 55px;
+    left: 210px;
+}
+
+.rpers {
+    min-width: 135px;
+    max-height: 10px;
+    position: relative;
+    top: 95px;
+    left: 75px;
+}
+
+.rtijd {
+    min-width: 135px;
+    max-height: 10px;
+    position: relative;
+    top: 135px;
+    left: -60px;
+}
+
+.ring {
+    min-width: 135px;
+    max-height: 10px;
+    position: relative;
+    top: 175px;
+    left: -195px;
+}
+
+.rtitle {
+    position: relative;
+    align-content: flex-start;
+    min-width: fit-content;
+    right: 945px;
+    bottom: 20px;
+}
+
+.rimg {
+    align-self: last baseline;
+    position: absolute;
+    height: 202.67px;
+}
+
+
+.rimg img {
+    max-width: 200px;
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-top-right-radius: 5px;
+}
+
+.recept {
+    position: absolute;
+    top: 140px;
+    left: 110px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.recept a {
+    background-image: linear-gradient(rgb(209, 209, 209), rgb(154, 154, 154));
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border-right: 5px solid black;
+    border-bottom: 5px solid black;
+    border-top: 3px solid rgb(92, 92, 92);
+    border-left: 3px solid rgb(92, 92, 92);
+    border-radius: 5px;
+    width: 1515px;
+    height: 650px;
+    display: flex;
+    flex-direction: row;
+}
+
+.stitle h1 {
+    margin: 0px;
+}
+
+.stitle {
+    min-width: 550px;
+    font-size: 30pt;
+    position: relative;
+    left: 0.15em;
+}
+
+.sinfo {
+    min-width: 220px;
+    font-size: 20pt;
+    position: relative;
+    align-content: flex-start;
+    right: 20em;
+    top: 64px;
+}
+
+.simg {
+    align-self: center;
+    position: relative;
+    height: 555px;
+    left: 8.9em;
+}
+
+
+.simg img {
+    max-width: 600px;
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+    border-top-left-radius: 5px;
+}
