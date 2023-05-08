@@ -1,18 +1,15 @@
 <?php
-if (!empty($_POST['txtEmail'])) {
-    $email = $_POST['txtEmail'];
-    $name = $_POST['txtName'];
-    $pass = $_POST['txtPass'];
+require 'database.php';
 
-    require 'database.php';
+if ($_SERVER["REQUEST_METHOD"] !== "POST")
+    header($_SERVER["SERVER_PROTOCOL"] . " 405 Method Not Allowed", true, 405);
+include '405.php';
+exit;
+$email = $_POST['txtEmail'];
+$name = $_POST['txtName'];
+$pass = $_POST['txtPass'];
 
-    $sql = "INSERT INTO accounts (email, name, password, ) 
+$sql = "INSERT INTO tools (email, name, password) 
                    VALUES ('$email', '$name', '$pass')";
 
-    mysqli_query($conn, $sql);
-
-    if (mysqli_query($conn, $sql)) {
-        header("location: index.php");
-        exit;
-    }
-}
+var_dump(mysqli_query($conn, $sql));
