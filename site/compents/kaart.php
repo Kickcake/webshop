@@ -1,24 +1,21 @@
 <div class="recepten">
     <?php
-    $sql = "SELECT * FROM Recepten;";
+    $sql = "SELECT * FROM products;";
     $recepten = mysqli_query($conn, $sql);
     $count = mysqli_fetch_assoc($recepten);
     foreach ($recepten as $recept) : ?>
         <a href="product.php?id=<?php echo $recept['id'] ?>" class="recept-card">
-            <div class="rgang">
-                <p>Gang: <?php echo $recept['course'] ?></p>
-            </div>
             <div class="rpers">
-                <p><?php echo $recept['amount'] ?> Personen</p>
+                <p><?php echo $recept['amount'] ?> </p>
             </div>
             <div class="rtijd">
-                <p>Duur: <?php echo $recept['time'] ?></p>
+                <p>Duur: <?php echo $recept['rating'] ?></p>
             </div>
             <div class="ring">
-                <p><?php echo $recept['ing'] ?> ingredienten</p>
+                <p><?php echo $recept['price'] ?> </p>
             </div>
             <div class="rlevel">
-                <p>Niveau: <?php echo $recept['level'] ?></p>
+                <p>Niveau: <?php echo $recept['category'] ?></p>
             </div>
             <div class="rtitle">
                 <h1><?php echo $recept['name'] ?></h1>

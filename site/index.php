@@ -2,24 +2,24 @@
 require_once 'database.php';
 session_start();
 if (empty($_GET["sort"])) {
-    $_GET["sort"] = "ing";
+    $_GET["sort"] = "id";
 }
 if (isset($_GET["sort"])) {
     switch ($_GET["sort"]) {
-        case "tijd":
-            $sql = "SELECT * FROM `Recepten` ORDER by time Desc;";
+        case "category":
+            $sql = "SELECT * FROM `products` ORDER by category Desc;";
             break;
-        case "niveau":
-            $sql = "SELECT * FROM `Recepten` ORDER by level ASC;";
+        case "amount":
+            $sql = "SELECT * FROM `products` ORDER by amount ASC;";
             break;
-        case "ing":
-            $sql = "SELECT * FROM `Recepten` ORDER by ing ASC;";
+        case "price":
+            $sql = "SELECT * FROM `products` ORDER by price ASC;";
             break;
-        case "id":
-            $sql = "SELECT * FROM `Recepten` ORDER by id ASC;";
+        case "rating":
+            $sql = "SELECT * FROM `products` ORDER by rating ASC;";
             break;
         default:
-            $sql = "SELECT * FROM `Recepten` ORDER by id ASC;";
+            $sql = "SELECT * FROM `products` ORDER by id ASC;";
             break;
     }
 }

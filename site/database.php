@@ -1,6 +1,6 @@
 <?php
 $host = "mariadb";
-$dbname = "webshop";
+$dbname = "Webshop";
 $dbuser = "user";
 $dbpass = "password";
 //werkt hoor

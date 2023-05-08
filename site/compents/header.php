@@ -1,6 +1,6 @@
 <?php
 require_once 'database.php';
-$sql = "SELECT COUNT(*) AS dl FROM Recepten;";
+$sql = "SELECT COUNT(*) AS dl FROM products;";
 $recepten = mysqli_query($conn, $sql);
 $count = mysqli_fetch_assoc($recepten);
 $l = ($count['dl']);
