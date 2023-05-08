@@ -6,6 +6,6 @@ $count = mysqli_fetch_assoc($recepten);
 $l = ($count['dl']);
 ?>
 <header>
-    <h1>ÈPICER</h1>
+    <h1>webesjop</h1>
     <?php include 'compents/nav.php' ?>
 </header>

@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <?php include 'compents/header.php' ?>
     <main>
         <div class="container">
             <div class="head">
@@ -25,7 +26,7 @@
                 <label for="txtPass">Password:</label>
                 <input type="text" id="txtPass" name="txtPass" placeholder="Password" autofocus>
 
-                <button type="submit">Create</button>
+                <button class="signbutton" type="submit">Create</button>
             </form>
         </div>
     </main>

@@ -54,6 +54,7 @@ if (is_bool($userd)) {
 </head>
 
 <body>
+    <?php include 'compents/header.php' ?>
     <h1>yo cool je ben ingelogt denk ik</h1>
 </body>
 

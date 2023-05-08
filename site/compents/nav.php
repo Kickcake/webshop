@@ -1,7 +1,7 @@
 <nav>
     <div class="buttond">
         <div class="count">
-            <p><?php echo $l ?> Recepten sorteren op:</p>
+            <p><?php echo $l ?> Producten sorteren op:</p>
         </div>
         <a href="index.php"><button>Home</button></a>
         <a href="/?sort=tijd"><button>tijd</button></a>

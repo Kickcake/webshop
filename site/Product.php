@@ -2,8 +2,8 @@
 require 'database.php';
 $id = $_GET['id'];
 
-$sql = "SELECT * FROM `recepten` WHERE id = '$id';";
-$tools = mysqli_query($conn, $sql);
+$sql = "SELECT * FROM `products` WHERE id = '$id';";
+$products = mysqli_query($conn, $sql);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,24 +25,25 @@ $tools = mysqli_query($conn, $sql);
     <main>
         <div class="recept">
             <?php
-            $sql = "SELECT * FROM Recepten WHERE id = '$id';";
-            $recepten = mysqli_query($conn, $sql);
-            $count = mysqli_fetch_assoc($recepten);
-            foreach ($recepten as $recept) : ?>
+            $sql = "SELECT * FROM producten WHERE id = '$id';";
+            $products = mysqli_query($conn, $sql);
+            $count = mysqli_fetch_assoc($products);
+            foreach ($products as $product) : ?>
+                foreach ($products as $product) : ?>
                 <a class="recept-card">
                     <div class="stitle">
-                        <h1><?php echo $recept['name'] ?></h1>
+                        <h1><?php echo $product['name'] ?></h1>
                     </div>
                     <div class="sinfo">
-                        <p>Niveau: <?php echo $recept['level'] ?><br>
-                            Gang: <?php echo $recept['course'] ?><br>
-                            <?php echo $recept['amount'] ?> Personen<br>
-                            Duur: <?php echo $recept['time'] ?><br>
-                            <?php echo $recept['ing'] ?> ingredienten
+                        <p>Niveau: <?php echo $product['level'] ?><br>
+                            Gang: <?php echo $product['course'] ?><br>
+                            <?php echo $product['amount'] ?> Personen<br>
+                            Duur: <?php echo $product['time'] ?><br>
+                            <?php echo $product['ing'] ?> ingredienten
                         </p>
                     </div>
                     <div class="simg">
-                        <img src="<?php echo $recept['image'] ?>">
+                        <img src="<?php echo $product['image'] ?>">
                     </div>
 
                 </a>

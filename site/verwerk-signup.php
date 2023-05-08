@@ -20,6 +20,7 @@ mysqli_query($conn, $sql);
 </head>
 
 <body>
+    <?php include 'compents/header.php' ?>
     <h1>yo cool je ben geberegistreerd</h1>
 </body>
 
