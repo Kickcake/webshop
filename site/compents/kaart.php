@@ -1,26 +1,26 @@
 <div class="recepten">
     <?php
     $sql = "SELECT * FROM products;";
-    $recepten = mysqli_query($conn, $sql);
-    $count = mysqli_fetch_assoc($recepten);
-    foreach ($recepten as $recept) : ?>
-        <a href="product.php?id=<?php echo $recept['id'] ?>" class="recept-card">
+    $products = mysqli_query($conn, $sql);
+    $count = mysqli_fetch_assoc($products);
+    foreach ($products as $product) : ?>
+        <a href="product.php?id=<?php echo $product['id'] ?>" class="recept-card">
             <div class="rpers">
-                <p><?php echo $recept['amount'] ?> </p>
+                <p>left in stock:<?php echo $product['amount'] ?> </p>
             </div>
             <div class="rtijd">
-                <p>Duur: <?php echo $recept['rating'] ?></p>
+                <p>5/<?php echo $product['rating'] ?></p>
             </div>
             <div class="ring">
-                <p><?php echo $recept['price'] ?> </p>
+                <p>Price:<?php echo $product['price'] ?> </p>
             </div>
             <div class="rlevel">
-                <p>Niveau: <?php echo $recept['category'] ?></p>
+                <p><?php echo $product['category'] ?></p>
             </div>
             <div class="rtitle">
-                <h1><?php echo $recept['name'] ?></h1>
+                <h1><?php echo $product['name'] ?></h1>
             </div>
-            <div class="rimg"><img src="<?php echo $recept['image'] ?>"></div>
+            <div class="rimg"><img src="<?php echo $product['image'] ?>"></div>
 
         </a>
     <?php endforeach; ?>

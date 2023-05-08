@@ -138,7 +138,7 @@ th {
     max-height: 10px;
     position: relative;
     top: 25px;
-    right: 33em;
+    right: 25em;
     min-width: 110%;
     align-content: center;
 }
@@ -156,7 +156,7 @@ th {
     max-height: 10px;
     position: relative;
     top: 95px;
-    left: 75px;
+    left: 210px;
 }
 
 .rtijd {
@@ -164,7 +164,7 @@ th {
     max-height: 10px;
     position: relative;
     top: 135px;
-    left: -60px;
+    left: 75px;
 }
 
 .ring {
@@ -172,14 +172,14 @@ th {
     max-height: 10px;
     position: relative;
     top: 175px;
-    left: -195px;
+    left: -60px;
 }
 
 .rtitle {
     position: relative;
     align-content: flex-start;
     min-width: fit-content;
-    right: 945px;
+    right: 805px;
     bottom: 20px;
 }
 
