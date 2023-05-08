@@ -5,36 +5,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inloggen</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css
-">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="text-center">
-    <main class="form-signin w-100 m-auto">
-        <form method="post" action="verwerk-signin.php">
-            <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+<body>
+    <main>
+        <div class="container">
+            <div class="head">
+                <h1>Sign in</h1>
+            </div>
+            <form class="form" action="verwerk-signin.php" method="post">
+                <label for="txtEmail">E-mail:</label>
+                <input type="text" id="txtEmail" name="email" placeholder="E-mail" autofocus>
+                <label for="txtPass">Password:</label>
+                <input type="text" id="txtPass" name="password" placeholder="Password" autofocus>
 
-            <div class="form-floating">
-                <input type="email" class="form-control" id="floatingInput" name="email" placeholder="name@example.com">
-                <label for="floatingInput">Email address</label>
-            </div>
-            <div class="form-floating">
-                <input type="password" class="form-control" id="floatingPassword" name="password" placeholder="Password">
-                <label for="floatingPassword">Password</label>
-            </div>
-
-            <div class="checkbox mb-3">
-                <label>
-                    <input type="checkbox" value="remember-me"> Remember me
-                </label>
-            </div>
-            <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
-            <p class="mt-5 mb-3 text-body-secondary">&copy; 2017–2023</p>
-        </form>
+                <button type="submit">Sign-in</button>
+            </form>
+        </div>
     </main>
-
-
 
 </body>
 
