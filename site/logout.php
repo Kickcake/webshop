@@ -1,13 +1,9 @@
 <?php
 require 'database.php';
-
-$email = $_POST['txtEmail'];
-$name = $_POST['txtName'];
-$pass = $_POST['txtPass'];
-
-$sql = "INSERT INTO accounts (email, name, password) VALUES ('$email', '$name', '$pass' )";
-
-mysqli_query($conn, $sql);
+session_start();
+unset($_SESSION);
+session_destroy();
+header("location: Sign-in.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,7 +16,7 @@ mysqli_query($conn, $sql);
 </head>
 
 <body>
-    <h1>yo cool je ben geberegistreerd</h1>
+    <h1>yo cool je ben iutgelogt denk ik</h1>
 </body>
 
 </html>

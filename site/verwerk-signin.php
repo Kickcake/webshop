@@ -26,21 +26,23 @@ require 'database.php';
 $sql = "SELECT * FROM accounts WHERE email = '$email' ";
 $result = mysqli_query($conn, $sql);
 $user = mysqli_fetch_assoc($result);
-$sqld = "SELECT * FROM accounts WHERE password = '$password' ";
-$resultd = mysqli_query($conn, $sqld);
-$userd = mysqli_fetch_assoc($resultd);
 if (!is_array($user)) {
     header("location: Sign-in.php");
 }
 if (is_bool($user)) {
     header("location: Sign-in.php");
 }
-if (!is_array($userd)) {
-    header("location: Sign-in.php");
+if ($user['password'] === $_POST['password']); {
+    session_start();
+
+    $_SESSION['SignedIn'] = true;
+    $_SESSION['sname'] = $user['name'];
+
+    header("location: dash.php");
+    exit;
 }
-if (is_bool($userd)) {
-    header("location: Sign-in.php");
-}
+header("location: sign-in.php");
+exit;
 
 ?>
 <!DOCTYPE html>
@@ -54,7 +56,6 @@ if (is_bool($userd)) {
 </head>
 
 <body>
-    <?php include 'compents/header.php' ?>
     <h1>yo cool je ben ingelogt denk ik</h1>
 </body>
 

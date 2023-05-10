@@ -10,7 +10,6 @@
 </head>
 
 <body>
-    <?php include 'compents/header.php' ?>
     <main>
         <div class="container">
             <div class="containerin">
