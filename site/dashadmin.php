@@ -19,7 +19,7 @@ if (!isset($_SESSION['SignedIn'])) {
 
 <body>
     <?php include 'compents/header.php' ?>
-    <h1>yo cool je ben ingelogt denk ik</h1>
+    <h1>yo cool je ben ingelogt maar adminfg denk ik</h1>
     <p>je naam is <?php echo $_SESSION['sname'] ?></p>
     <div>
         <a href="logout.php"> log out</a>

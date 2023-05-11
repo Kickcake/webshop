@@ -5,7 +5,7 @@ $email = $_POST['txtEmail'];
 $name = $_POST['txtName'];
 $pass = $_POST['txtPass'];
 
-$sql = "INSERT INTO accounts (email, name, password) VALUES ('$email', '$name', '$pass' )";
+$sql = "INSERT INTO accounts (email, name, password, role) VALUES ('$email', '$name', '$pass', 'user' )";
 
 mysqli_query($conn, $sql);
 ?>

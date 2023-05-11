@@ -72,6 +72,7 @@
 </head>
 
 <body>
+    <?php include 'compents/header.php' ?>
     <!-- This file lives in public/404.html -->
     <img src="images/405.jpg" class="image">
     <div>

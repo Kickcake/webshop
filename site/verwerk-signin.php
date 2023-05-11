@@ -38,6 +38,13 @@ if ($user['password'] === $_POST['password']); {
     $_SESSION['SignedIn'] = true;
     $_SESSION['sname'] = $user['name'];
 
+    if ($user['role'] === 'admin') {
+        header("location: dashadmin.php");
+    }
+    if ($user['role'] === 'user') {
+        header("location: dash.php");
+    }
+
     header("location: dash.php");
     exit;
 }

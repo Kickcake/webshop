@@ -16,6 +16,7 @@ header("location: Sign-in.php");
 </head>
 
 <body>
+    <?php include 'compents/header.php' ?>
     <h1>yo cool je ben iutgelogt denk ik</h1>
 </body>
 

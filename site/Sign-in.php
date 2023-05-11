@@ -10,13 +10,14 @@
 </head>
 
 <body>
+    <?php include 'compents/header.php' ?>
     <main>
         <div class="container">
             <div class="containerin">
                 <div class="head">
                     <h1>Sign in</h1>
                 </div>
-                <form action="verwerk-signin.php" method="post">
+                <form class="form" action="verwerk-signin.php" method="post">
                     <label for="txtEmail">E-mail:</label>
                     <input type="text" id="txtEmail" name="email" placeholder="E-mail" autofocus>
 

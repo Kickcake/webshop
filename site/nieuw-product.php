@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <?php include 'compents/header.php' ?>
     <form action="verwerk-nieuw-product.php" method="post">
         <h1>Nieuw product</h1>
         <div class="groep">
