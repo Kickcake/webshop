@@ -24,7 +24,7 @@
                     <label for="txtPass">Password:</label>
                     <input type="text" id="txtPass" name="password" placeholder="Password" autofocus>
 
-                    <button class="signbutton" type="submit">Sign-in</button>
+                    <button class="formbutton" type="submit">Sign-in</button>
                 </form>
             </div>
         </div>

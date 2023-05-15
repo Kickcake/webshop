@@ -2,7 +2,7 @@
 require 'database.php';
 $id = $_GET['id'];
 
-$sql = "SELECT * FROM `products` WHERE id = '$id';";
+$sql = "SELECT * FROM products WHERE id = '$id';";
 $products = mysqli_query($conn, $sql);
 ?>
 <!DOCTYPE html>
@@ -23,24 +23,18 @@ $products = mysqli_query($conn, $sql);
         <img class="sideimg" src="images/160626-haal-marokko-in-huis-5-bron-casa-de-valentina.jpg" alt="sideimg">
     </div>
     <main>
-        <div class="recept">
+        <div class="product">
             <?php
-            $sql = "SELECT * FROM producten WHERE id = '$id';";
-            $products = mysqli_query($conn, $sql);
-            $count = mysqli_fetch_assoc($products);
             foreach ($products as $product) : ?>
-                foreach ($products as $product) : ?>
                 <a class="recept-card">
                     <div class="stitle">
                         <h1><?php echo $product['name'] ?></h1>
                     </div>
                     <div class="sinfo">
-                        <p>Niveau: <?php echo $product['level'] ?><br>
-                            Gang: <?php echo $product['course'] ?><br>
-                            <?php echo $product['amount'] ?> Personen<br>
-                            Duur: <?php echo $product['time'] ?><br>
-                            <?php echo $product['ing'] ?> ingredienten
-                        </p>
+                        <p><?php echo $product['category'] ?> - <?php echo $product['brand'] ?></p>
+                        <p>$<?php echo $product['price'] ?></p>
+                        <p>rated <?php echo $product['rating'] ?>/5</p>
+                        <p><?php echo $product['amount'] ?> left in stock</p>
                     </div>
                     <div class="simg">
                         <img src="<?php echo $product['image'] ?>">
