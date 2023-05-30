@@ -28,5 +28,6 @@ services:
     environment:
       - PMA_ARBITRARY=1
       - PMA_HOST=mariadb
+      - PHP_VERSION=8.1.0
     depends_on:
       - mariadb

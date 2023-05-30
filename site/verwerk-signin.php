@@ -4,53 +4,36 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     include '405.php';
     exit;
 }
-if (!isset($_POST['email'])) {
+
+if (!isset($_POST['email']) || empty($_POST['email']) || !isset($_POST['password']) || empty($_POST['password'])) {
     header("location: Sign-in.php");
     exit;
 }
-if (empty($_POST['email'])) {
-    header("location: Sign-in.php");
-    exit;
-}
-if (!isset($_POST['password'])) {
-    header("location: Sign-in.php");
-    exit;
-}
-if (empty($_POST['password'])) {
-    header("location: Sign-in.php");
-    exit;
-}
+
 $email = $_POST['email'];
 $password = $_POST['password'];
 require 'database.php';
 $sql = "SELECT * FROM accounts WHERE email = '$email' ";
 $result = mysqli_query($conn, $sql);
 $user = mysqli_fetch_assoc($result);
-if (!is_array($user)) {
+
+if (!is_array($user) || is_bool($user) || !password_verify($password, $user['password'])) {
     header("location: Sign-in.php");
-}
-if (is_bool($user)) {
-    header("location: Sign-in.php");
-}
-if ($user['password'] === $_POST['password']); {
-    session_start();
-
-    $_SESSION['SignedIn'] = true;
-    $_SESSION['sname'] = $user['name'];
-
-    if ($user['role'] === 'admin') {
-        header("location: dashadmin.php");
-    }
-    if ($user['role'] === 'user') {
-        header("location: dash.php");
-    }
-
-    header("location: dash.php");
     exit;
 }
-header("location: sign-in.php");
-exit;
 
+session_start();
+$_SESSION['SignedIn'] = true;
+$_SESSION['sname'] = $user['name'];
+
+if ($user['role'] === 'admin') {
+    $_SESSION['admin'] = true;
+    header("location: dashadmin.php");
+    exit;
+}
+
+header("location: dash.php");
+exit;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -63,7 +46,7 @@ exit;
 </head>
 
 <body>
-    <h1>yo cool je ben ingelogt denk ik</h1>
+    <h1>Yo cool, you are logged in!</h1>
 </body>
 
 </html>

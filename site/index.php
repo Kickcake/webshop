@@ -39,7 +39,9 @@ $recepten = mysqli_query($conn, $sql);
 
 <body>
     <?php include 'compents/header.php' ?>
-    <?php include 'compents/kaart.php'; ?>
+    <main>
+        <?php include 'compents/kaart.php'; ?>
+    </main>
     <?php include 'compents/footer.php'; ?>
 </body>
 

@@ -1,3 +1,14 @@
+<?php
+require 'database.php';
+session_start();
+
+if (!isset($_SESSION['SignedIn'])) {
+    header("location: Sign-in.php");
+}
+if (!isset($_SESSION['admin'])) {
+    header("location: Sign-in.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 

@@ -5,9 +5,11 @@ $email = $_POST['txtEmail'];
 $name = $_POST['txtName'];
 $pass = $_POST['txtPass'];
 
-$sql = "INSERT INTO accounts (email, name, password, role) VALUES ('$email', '$name', '$pass', 'user' )";
+$hashed_pass = password_hash($pass, PASSWORD_DEFAULT);
+$sql = "INSERT INTO accounts (email, name, password, role) VALUES ('$email', '$name', '$hashed_pass', 'user' )";
 
 mysqli_query($conn, $sql);
+header("location: Sign-in.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">

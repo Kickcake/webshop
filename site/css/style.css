@@ -112,11 +112,10 @@ th {
 }
 
 .products {
+    margin: 30px auto 0px auto;
     top: 1em;
-    max-width: 97em;
-    padding-top: 20px;
+    max-width: 71em;
     position: relative;
-    left: 110px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -135,90 +134,27 @@ th {
     margin-bottom: 5px;
     border: 3px solid rgb(92, 92, 92);
     border-radius: 5px;
-    width: 23em;
-    height: 18em;
+    width: 17em;
+    height: 15em;
 }
 
 .product-card div:last-child {
     position: relative;
-    left: 13.62em;
+    left: 9.63em;
     bottom: 13.62em;
-    height: 17.25vw;
-    max-width: 9vw;
-    max-height: 17.25vw;
+    height: 15em;
+    max-width: 9.4em;
+    max-height: 15em;
 
 }
 
 .product-card img {
     object-fit: cover;
-    height: 17.25vw;
-    max-width: 9vw;
-    max-height: 17.25vw;
+    height: 15em;
+    max-width: 7.4em;
+    max-height: 15em;
     border-bottom-right-radius: 2px;
     border-top-right-radius: 2px;
-}
-
-.rlevel {
-    max-height: 10px;
-    position: relative;
-    top: 25px;
-    right: 25em;
-    min-width: 110%;
-    align-content: center;
-}
-
-.rgang {
-    min-width: 135px;
-    max-height: 10px;
-    position: relative;
-    top: 55px;
-    left: 210px;
-}
-
-.rpers {
-    min-width: 135px;
-    max-height: 10px;
-    position: relative;
-    top: 95px;
-    left: 210px;
-}
-
-.rtijd {
-    min-width: 135px;
-    max-height: 10px;
-    position: relative;
-    top: 135px;
-    left: 75px;
-}
-
-.ring {
-    min-width: 135px;
-    max-height: 10px;
-    position: relative;
-    top: 175px;
-    left: -60px;
-}
-
-.rtitle {
-    position: relative;
-    align-content: flex-start;
-    min-width: fit-content;
-    right: 805px;
-    bottom: 20px;
-}
-
-.rimg {
-    align-self: last baseline;
-    position: absolute;
-    height: 202.67px;
-}
-
-
-.rimg img {
-    max-width: 200px;
-    border-top: 3px solid black;
-    border-right: 3px solid black;
-    border-top-right-radius: 5px;
 }
 
 .product {
@@ -420,4 +356,16 @@ input:focus {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -10%);
+}
+
+@media screen and (max-width:1128px) {
+    .products {
+        max-width: 53em;
+    }
+}
+
+@media screen and (max-width:847px) {
+    .products {
+        width: 36em;
+    }
 }
